@@ -30,7 +30,9 @@ export class AppController {
 
   @Get('streamable-file')
   getStreamableFile() {
-    return new StreamableFile(this.appService.getFileStream());
+    const t = this.appService.getFileStream();
+    const tt = new StreamableFile(t);
+    return tt;
   }
 
   // normally, `@Res()` would be a `Response` type, but I'm only interested in piping it here, so this makes the mock in the spec smaller
