@@ -14,7 +14,8 @@
     "baseUrl": ".",
     "incremental": true,
     "rootDir": ".",
-    "paths": {}
+    "paths": {},
+    "outDir": "./dist"
   },
   "exclude": ["node_modules", "dist", "tmp"]
 }

@@ -25,7 +25,9 @@ describe('AppService', () => {
       it('should get the file information', () => {
         // this is passing a value to an internal constructor that isn't usually exposed. Only do this if you understand the implications
         // ref: https://github.com/nodejs/node/blob/master/lib/internal/fs/streams.js#L145
-        const stream = new fs.ReadStream('path' as unknown);
+        const stream = new fs.ReadStream(
+          join(process.cwd(), 'package.json') as unknown,
+        );
         const crsMock = jest
           .spyOn(fs, 'createReadStream')
           .mockReturnValue(stream);

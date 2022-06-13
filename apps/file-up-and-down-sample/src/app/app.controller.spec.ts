@@ -59,8 +59,12 @@ describe('AppController', () => {
   });
   describe('getStreamableFile', () => {
     it('should return a streamable file', () => {
-      expect(appController.getStreamableFile()).toEqual(
-        new StreamableFile(Buffer.from('Hello World!')),
+      const returnedStreamableFile = appController.getStreamableFile();
+      const expectedStreamableFile = new StreamableFile(
+        Buffer.from('Hello World!'),
+      );
+      expect(returnedStreamableFile.getStream().read()).toEqual(
+        expectedStreamableFile.getStream().read(),
       );
     });
   });
