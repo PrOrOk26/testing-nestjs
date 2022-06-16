@@ -142,6 +142,24 @@
       "compilerOptions": {
         "tsConfigPath": "apps/prisma-sample/tsconfig.app.json"
       }
+    },
+    "rabbitmq-sample": {
+      "type": "application",
+      "root": "apps/rabbitmq-sample",
+      "entryFile": "main",
+      "sourceRoot": "apps/rabbitmq-sample/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/rabbitmq-sample/tsconfig.app.json"
+      }
+    },
+    "users-sample": {
+      "type": "application",
+      "root": "apps/users-sample",
+      "entryFile": "main",
+      "sourceRoot": "apps/users-sample/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users-sample/tsconfig.app.json"
+      }
     }
   }
 }

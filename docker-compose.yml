@@ -31,3 +31,14 @@ services:
       MYSQL_DATABASE: test
     ports:
       - '3306:3306'
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:3.8-management-alpine
+    volumes:
+      - /var/lib/rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=myuser
+      - RABBITMQ_DEFAULT_PASS=mypassword
+    ports:
+      - 5672:5672
+      - 15672:15672

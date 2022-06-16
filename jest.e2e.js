@@ -5,6 +5,6 @@ const baseConfig = require('./jest.config');
  */
 module.exports = {
   ...baseConfig,
-  rootDir: '..',
-  testMatch: ['<rootDir>/test/**/*.e2e-spec.ts'],
+  rootDir: '.',
+  testMatch: ['<rootDir>/apps/**/test/**/*.e2e-spec.ts'],
 };
